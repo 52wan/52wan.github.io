@@ -1,14 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
+    <title>正在加载</title>
+    <script>
+        let url = new URL(window.location.href);
+        var nid = url.pathname.replace("/","");
+        var timeid = new Date().getTime().toString().substr(-11,5);
+        var newurl = "http://wan55.cn/" + nid + "#" + timeid;
+        console.log(newurl);
+        document.location.href = newurl;
+    </script>
 </head>
-    
 <body>
-123456
-<script>
-    let url = new URL(window.location.href);
-    console.log(url);
-</script>
 </body>
 </html>
